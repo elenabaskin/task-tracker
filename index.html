@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
+    <title>Task Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Task List.</h1>
+    </header>
+    <button onclick="displayNew()" class="create-button">New Task</button>
+    <div class="main-container">
+      <section class="page-one" id="pageOne">
+        <figure class="painting">
+          <img src="images/manet.jpeg" alt="manet painting of two roses" />
+        </figure>
+
+        <h2>Create Task.</h2>
+
+        <form id="taskForm">
+          <label for="title">Task</label>
+          <br />
+          <input type="text" id="newTasks" name="title" maxlength="25" /><br />
+          <br />
+
+          <!-- <label for="date">Complete By</label>
+          <br />
+          <input
+            type="date"
+            id="taskDate"
+            name="date"
+            value="2022-10-25"
+            min="2022-10-17"
+          /> -->
+
+          <!-- <br />
+          <br /> -->
+        </form>
+        <button onclick="createTask()" class="submit">Submit</button>
+      </section>
+
+      <section class="page-two">
+        <h3>Task List.</h3>
+        <ul id="tasks" class="tasks">
+          <li>Read chapter in book</li>
+          <li class="checked">Do laundry</li>
+          <li>Buy oat milk</li>
+        </ul>
+      </section>
+    </div>
+    <!-- <h1>Task Tracker.</h1>
+    <button onclick="displayNew()" class="create-button">New Task</button>
+    <div class="main-container">
+      <section class="page-one" id="page-one">
+        <figure class="painting">
+          <img src="images/manet.jpeg" alt="manet painting of two roses" />
+        </figure>
+        <h2>Create Task.</h2>
+
+        <form id="new-task-form">
+          <label for="title">Task</label>
+          <br />
+          <input
+            type="text"
+            id="new-task-input"
+            name="title"
+            maxlength="25"
+          /><br />
+          <br />
+
+          <label for="date">Complete By</label>
+          <br />
+          <input
+            type="date"
+            id="task-date"
+            name="date"
+            value="2022-10-25"
+            min="2022-10-17"
+          />
+
+          <br />
+          <br />
+
+          <label for="type">Category</label>
+          <br />
+          <select name="type" id="task-type" class="type">
+            <option value="both">Urgent & Important</option>
+            <option value="first">Urgent, not Important</option>
+            <option value="second">Important, not Urgent</option>
+            <option value="neither">Not Urgent or Important</option>
+          </select>
+
+          <br />
+          <br />
+
+          <input type="submit" value="Submit" class="submit" id="task-submit" />
+        </form>
+      </section>
+
+      <section class="page-two">
+        <h3>Task List.</h3>
+        <div class="tasks">
+          <!-- <div class="task">
+            <div class="content">
+              <input
+                type="text"
+                class="text"
+                value="Your tasks here"
+                readonly
+              />
+            </div>
+            <div class="actions">
+              <select name="status" id="task-status" class="status">
+                <option value="one">Not Started</option>
+                <option value="two">In Progress</option>
+                <option value="three">Completed</option>
+              </select>
+              <button class="edit">Edit</button>
+            </div>
+          </div> -->
+    <!-- </div>
+      </section>
+    </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>
