@@ -18,6 +18,11 @@ for (i = 0; i < myList.length; i++) {
   span.className = "close";
   span.appendChild(txt);
   myList[i].appendChild(span);
+  //creates edit button next to all list items
+  var editBtn = document.createElement("button");
+  editBtn.innerText = "Edit";
+  editBtn.className = "edit";
+  myList[i].appendChild(editBtn);
 }
 
 // click on a close button to hide that list item
@@ -29,6 +34,31 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   };
 }
+
+// var edit = document.getElementsByClassName("edit");
+// var li = document.querySelector("li");
+
+// var editOption = edit.addEventListener("click", function () {
+//   li.contentEditable = true;
+// });
+
+//edit function
+var editTasks = function () {
+  console.log("Edit Task...");
+  console.log("Change 'edit' to 'save'");
+
+  var li = this.parentNode;
+  var editInput = li.querySelector("li");
+  var label = li.querySelector("label");
+  containsClass = li.classList.contains("editMode");
+
+  if (containsClass) {
+    label.innerText = editInput.value;
+  } else {
+    editInput.value = label.innerText;
+  }
+  li.classList.toggle("editMode");
+};
 
 //adds a "checked" symbol when clicking on an item
 var list = document.querySelector("ul");
@@ -42,9 +72,10 @@ list.addEventListener(
   false
 );
 
-// Create a new list item when clicking on the "Add" button
+// Create a new list item when clicking on the "Submit" button
 function createTask() {
   var li = document.createElement("li");
+  li.setAttribute("readonly", "readonly");
   var inputValue = document.getElementById("newTasks").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
@@ -55,6 +86,7 @@ function createTask() {
   }
   document.getElementById("taskForm").value = "";
 
+  //   adds x option to all new tasks
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
@@ -69,30 +101,3 @@ function createTask() {
     };
   }
 }
-
-//creates new item when clicking "submit"
-// function createTask() {
-//   var li = document.createElement("li");
-//   var inputValue = document.getElementById("new-task").ariaValueMax;
-//   var t = document.createTextNode(inputValue);
-//   li.appendChild(t);
-//   if (inputValue === "") {
-//     alert("Please enter a task.");
-//     return;
-//   } else {
-//     document.getElementById("tasks").appendChild(li);
-//   }
-//   document.getElementById("new-task").value = "";
-//   var span = document.createElement("span");
-//   var txt = document.createTextNode("\u00D7");
-//   span.className = "close";
-//   span.appendChild(txt);
-//   li.appendChild(span);
-
-//   for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function () {
-//       var div = this.parentElement;
-//       div.style.display = "none";
-//     };
-//   }
-// }
