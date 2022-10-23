@@ -1,3 +1,4 @@
+// hides & displays tips button
 function readTips() {
   var x = document.getElementById("tips");
   if (x.style.display === "none") {
@@ -54,12 +55,12 @@ function addTask() {
   const list = document.querySelector("ul");
   // return if task is empty
   if (task.value === "") {
-    alert("Please add some task!");
+    alert("🧸🪶: You must enter something!");
     return false;
   }
   // check is task already exist
   if (document.querySelector(`input[value="${task.value}"]`)) {
-    alert("Task already exist!");
+    alert("🧸🪶: Task already exist!");
     return false;
   }
 
@@ -118,14 +119,14 @@ function editTask(event) {
   let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
   // check if task is empty
   if (event.value === "") {
-    alert("Task is empty!");
+    alert("🧸🪶: Task is empty!");
     event.value = currentTask;
     return;
   }
   // task already exist
   tasks.forEach((task) => {
     if (task.task === event.value) {
-      alert("Task already exist!");
+      alert("🧸🪶:Task already exist!");
       event.value = currentTask;
       return;
     }

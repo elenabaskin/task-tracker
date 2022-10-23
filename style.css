@@ -30,6 +30,7 @@ body {
   display: none;
 }
 
+/* non-customizable elements given book font */
 h1,
 h2,
 h3,
@@ -124,6 +125,7 @@ input {
   border-bottom: 1px solid #1a1718;
   width: 60%;
   background-color: transparent;
+  /* user input element, wanted handwritten effect */
   font-family: "Homemade Apple", cursive;
   margin-left: 5px;
   font-size: 1.1rem;
@@ -142,6 +144,7 @@ img {
   height: 40vh;
 }
 
+/* submit button */
 .btn {
   width: 20%;
   height: 2rem;
@@ -194,6 +197,7 @@ ul li {
   font-family: "Homemade Apple", cursive;
   color: #1a1718;
   border: none;
+  overflow: visible;
 
   /* make the list items unselectable */
   /* -webkit-user-select: none;

@@ -13,11 +13,14 @@
     <title>Task Tracker</title>
   </head>
   <body>
+
     <!-- title -->
     <header>
       <h1>Task List.</h1>
-      <p id = "tips">Enter desired task on line below Create Task header and then click Submit. Click once to cross task off your list, double click to edit the task's contents, and click the X button to delete it off the list. If on mobile or tablet, click New Task to display/hide input form. -🧸🕯️</p>
+      <!-- how task tracker works -->
+      <p id = "tips">Enter desired task under Create Task. Press Enter or click Submit to add task to list. Click inside task to edit it, click the circle in front to cross it off, and click the trash can to delete selected task. -🧸🕯️</p>
     </header>
+
     <div class = "top-btns">
     <!-- button to display tips for navigating -->
     <button onclick="readTips()" class = "tips-button">Tips</button>
@@ -27,21 +30,26 @@
 
     <!-- container for entire tracker -->
     <div class="main-container">
+
       <!-- create task section -->
       <section class="page-one" id="pageOne">
+
         <!-- image shown on desktop version -->
         <figure class="painting">
           <img src="images/manet.jpeg" alt="manet painting of two roses" />
         </figure>
+
         <h2>Create Task.</h2>
-        <!-- <label for "userinput"></label> -->
+        <!-- user input form -->
         <form>
         <input id = "userinput" type = "text" class = "form-control" placeholder = "Enter task.">
-        <button id = "add" class = "btn" type="button">Submit</button>
+        <button class = "btn" type="submit">Submit</button>
       </form>
         </section>
 
+       
         <section class = "page-two">
+           <!-- list output -->
           <ul id = "task-list">
           </ul>
         </section>
