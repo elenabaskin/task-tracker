@@ -9,43 +9,81 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Homemade+Apple&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>Task Tracker</title>
   </head>
   <body>
+    <!-- title -->
     <header>
       <h1>Task List.</h1>
+      <p id = "tips">Enter desired task on line below Create Task header and then click Submit. Click once to cross task off your list, double click to edit the task's contents, and click the X button to delete it off the list. If on mobile or tablet, click New Task to display/hide input form. -🧸🕯️</p>
     </header>
+    <div class = "top-btns">
+    <!-- button to display tips for navigating -->
+    <button onclick="readTips()" class = "tips-button">Tips</button>
+    <!-- button for create task on mobile & tablet -->
     <button onclick="displayNew()" class="create-button">New Task</button>
+  </div>
+
+    <!-- container for entire tracker -->
     <div class="main-container">
+      <!-- create task section -->
       <section class="page-one" id="pageOne">
+        <!-- image shown on desktop version -->
         <figure class="painting">
           <img src="images/manet.jpeg" alt="manet painting of two roses" />
         </figure>
-
         <h2>Create Task.</h2>
+        <!-- <label for "userinput"></label> -->
+        <form>
+        <input id = "userinput" type = "text" class = "form-control" placeholder = "Enter task.">
+        <button id = "add" class = "btn" type="button">Submit</button>
+      </form>
+        </section>
 
-        <form id="taskForm">
+        <section class = "page-two">
+          <ul id = "task-list">
+          </ul>
+        </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- 1st version -->
+        <!-- beginning of create task -->
+        <!-- <h2>Create Task.</h2> -->
+
+        <!-- form to input task -->
+        <!-- <form id="taskForm">
           <label for="title">Task</label>
           <br />
           <input type="text" id="newTasks" name="title" maxlength="25" /><br />
           <br />
-        </form>
-        <button onclick="createTask()" class="submit">Submit</button>
-      </section>
+        </form> -->
+        <!-- submit task -->
+        <!-- <button onclick="createTask()" class="submit">Submit</button>
+      </section> -->
 
-      <section class="page-two">
-        <h3>Task List.</h3>
-        <ul id="tasks" class="tasks">
+      <!-- output section -->
+      <!-- <section class="page-two">
+        <h3>Task List.</h3> -->
+        <!-- list where tasks will go once submitted -->
+        <!-- <ul id="tasks" class="tasks"> -->
+          <!-- default tasks that can be deleted -->
           <!-- <li>Read chapter in book</li>
           <li class="checked">Do laundry</li>
           <li>Buy oat milk</li> -->
-          <li><label></label><input type = "text" value = "Read chapter in book"></li>
+          <!-- <li><label></label><input type = "text" value = "Read chapter in book"></li>
           <li class="checked"><label></label></label><input type = "text" value = "Do laundry"></li>
-          <li class="editMode"><label></label><input type = "text" value = "Buy oat milk"></li>
-        </ul>
+          <li class="editMode"><label></label><input type = "text" value = "Buy oat milk"></li> -->
+        <!-- </ul>
       </section>
-    </div>
-    <!-- <h1>Task Tracker.</h1>
+    </div> -->
+
+
+<!-- future version -->
+<!-- <h1>Task Tracker.</h1>
     <button onclick="displayNew()" class="create-button">New Task</button>
     <div class="main-container">
       <section class="page-one" id="page-one">
@@ -115,9 +153,6 @@
               <button class="edit">Edit</button>
             </div>
           </div> -->
-    <!-- </div>
+<!-- </div>
       </section>
     </div> -->
-    <script src="app.js"></script>
-  </body>
-</html>
