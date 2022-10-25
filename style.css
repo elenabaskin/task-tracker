@@ -211,6 +211,7 @@ ul li:hover {
   background: rgba(255, 229, 180, 0.3);
 }
 
+/* checkbox before list item */
 .check {
   width: 0.8em;
   height: 0.8em;
@@ -238,6 +239,7 @@ ul li:hover {
   outline: none;
 }
 
+/* delete icon */
 .fa {
   float: right;
   cursor: pointer;
@@ -254,59 +256,6 @@ ul li:hover {
   color: rgba(192, 192, 192, 0.8);
   text-decoration: line-through;
 }
-
-/* When clicked on, add a background color and strike out text */
-/* .check {
-  background: rgba(58, 83, 17, 0.4);
-  text-decoration: line-through;
-} */
-
-/* Add a "checked" mark when clicked on */
-/* .check:checked { */
-/* content: "";
-  position: absolute; */
-/* border-color: #652a0e; */
-/* border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px; */
-/* background: rgba(58, 83, 17, 0.4);
-} */
-
-/* x button styling */
-/* .deletebutton { */
-/* position: relative;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px; */
-/* display: inline-block;
-  color: #fafafa;
-  background-color: #652a0e;
-  padding: 0;
-  width: 1.5rem; */
-/* visibility: hidden; */
-/* } */
-
-/* .deletebutton:hover {
-  background-color: rgba(58, 83, 17, 0.6);
-  color: #fafafa;
-}
-
-.itemdiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5em;
-  margin-left: 10px;
-  margin-right: 10px;
-} */
-
-/* .itemdiv:hover > .deletebutton {
-  visibility: visible;
-} */
 
 /* media query: mobile */
 @media (max-width: 500px) {
@@ -367,6 +316,7 @@ ul li:hover {
     width: 15rem;
   }
 
+  /* slip of paper look */
   .page-one {
     border-left: none;
     border-right: 1px solid rgba(26, 23, 24, 0.2);
@@ -449,6 +399,7 @@ ul li:hover {
     font-size: 1.2rem;
   }
 
+  /* green sticky note look */
   .page-one {
     margin-top: 15px;
     margin-left: 35px;
@@ -470,3 +421,57 @@ ul li:hover {
     border-right: 1px solid rgba(26, 23, 24, 0.5);
   }
 }
+
+/* previous styling */
+/* When clicked on, add a background color and strike out text */
+/* .check {
+  background: rgba(58, 83, 17, 0.4);
+  text-decoration: line-through;
+} */
+
+/* Add a "checked" mark when clicked on */
+/* .check:checked { */
+/* content: "";
+  position: absolute; */
+/* border-color: #652a0e; */
+/* border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px; */
+/* background: rgba(58, 83, 17, 0.4);
+} */
+
+/* x button styling */
+/* .deletebutton { */
+/* position: relative;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px; */
+/* display: inline-block;
+  color: #fafafa;
+  background-color: #652a0e;
+  padding: 0;
+  width: 1.5rem; */
+/* visibility: hidden; */
+/* } */
+
+/* .deletebutton:hover {
+  background-color: rgba(58, 83, 17, 0.6);
+  color: #fafafa;
+}
+
+.itemdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+
+/* .itemdiv:hover > .deletebutton {
+  visibility: visible;
+} */

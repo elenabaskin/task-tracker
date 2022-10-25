@@ -32,10 +32,10 @@ function loadTasks() {
   // if not then return
   if (localStorage.getItem("tasks") == null) return;
 
-  // Get the tasks from localStorage and convert it to an array
+  // get the tasks from localStorage and convert it to an array
   let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 
-  // Loop through the tasks and add them to the list
+  // loop through the tasks and add them to the list
   tasks.forEach((task) => {
     const list = document.querySelector("ul");
     const li = document.createElement("li");
@@ -55,10 +55,11 @@ function addTask() {
   const list = document.querySelector("ul");
   // return if task is empty
   if (task.value === "") {
+    //input validation
     alert("🧸🪶: You must enter something!");
     return false;
   }
-  // check is task already exist
+  // check is task already exist - no duplicates
   if (document.querySelector(`input[value="${task.value}"]`)) {
     alert("🧸🪶: Task already exist!");
     return false;
@@ -75,9 +76,11 @@ function addTask() {
 
   // create list item, add innerHTML and append to ul
   const li = document.createElement("li");
+  // checkbox -> task -> trash can
   li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check">
       <input type="text" value="${task.value}" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
       <i class="fa fa-trash" onclick="removeTask(this)"></i>`;
+  // newest task always ends up on top
   list.insertBefore(li, list.children[0]);
   // clear input
   task.value = "";
@@ -91,6 +94,7 @@ function taskComplete(event) {
     }
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  // adds completed styling
   event.nextElementSibling.classList.toggle("completed");
 }
 
@@ -103,6 +107,7 @@ function removeTask(event) {
     }
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  // removed from local storage
   event.parentElement.remove();
 }
 
@@ -141,6 +146,7 @@ function editTask(event) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+// previous attempt w/ fs
 // import { json } from "body-parser";
 
 // let todos = [];
