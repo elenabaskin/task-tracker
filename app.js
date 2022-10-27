@@ -23,6 +23,7 @@ window.onload = loadTasks;
 
 // On form submit add task
 document.querySelector("form").addEventListener("submit", (e) => {
+  //e = event
   e.preventDefault();
   addTask();
 });
