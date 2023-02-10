@@ -1,8 +1,14 @@
 body {
   padding: 0;
   margin: 0;
-  background: radial-gradient(#fafafa, #c2c5aa);
+  background: radial-gradient(#fafafa, #ecebc9);
   background-repeat: no-repeat;
+}
+
+.tips {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
 }
 
 .tips-button {
@@ -17,7 +23,7 @@ body {
   border-bottom: 1px solid rgba(26, 23, 24, 0.5);
   border-right: 1px solid rgba(26, 23, 24, 0.7);
   margin-left: 10px;
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
 }
 
 .tips-button:hover {
@@ -37,7 +43,7 @@ h3,
 ::placeholder,
 p,
 .deletebutton {
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
 }
 
 h1 {
@@ -126,7 +132,7 @@ input {
   width: 60%;
   background-color: transparent;
   /* user input element, wanted handwritten effect */
-  font-family: "Homemade Apple", cursive;
+  font-family: 'Homemade Apple', cursive;
   margin-left: 5px;
   font-size: 1.1rem;
 }
@@ -142,6 +148,8 @@ input {
 img {
   object-fit: contain;
   height: 40vh;
+  border: 1px solid #652a0e;
+  border-radius: 5px;
 }
 
 /* submit button */
@@ -155,11 +163,11 @@ img {
   border-radius: 5px;
   background-color: #652a0e;
   color: #fafafa;
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
 }
 
 .btn:hover {
-  background-color: rgba(58, 83, 17, 0.6);
+  background-color: #caad7e;
 }
 
 .page-two {
@@ -194,7 +202,7 @@ ul li {
   font-size: 18px;
   transition: 0.2s;
   list-style: none;
-  font-family: "Homemade Apple", cursive;
+  font-family: 'Homemade Apple', cursive;
   color: #1a1718;
   border: none;
   overflow: visible;
@@ -280,7 +288,7 @@ ul li:hover {
     border-bottom: 1px solid rgba(26, 23, 24, 0.5);
     border-right: 1px solid rgba(26, 23, 24, 0.7);
     margin-left: 10px;
-    font-family: "EB Garamond", serif;
+    font-family: 'EB Garamond', serif;
   }
 
   .create-button:hover {
@@ -360,7 +368,7 @@ ul li:hover {
     border-bottom: 1px solid rgba(26, 23, 24, 0.5);
     border-right: 1px solid rgba(26, 23, 24, 0.7);
     margin-left: 10px;
-    font-family: "EB Garamond", serif;
+    font-family: 'EB Garamond', serif;
   }
 
   .create-button:hover {
